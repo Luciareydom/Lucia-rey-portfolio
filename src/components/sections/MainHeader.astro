@@ -10,15 +10,14 @@ import Home from '../iconos/Home.astro'
     </h1>
     <nav class="navbar">
         <a href="/" >
-        <Home className="home-icon" /></a>
-        <a href="/contacto"><Envelope className="envelope-icon"/></a>
+        <Home className="home-icon" /><span>Home</span></a>
+        <a href="/contacto"><Envelope className="envelope-icon"/><span>Contacto</span></a>
         
     </nav>
 </header>
 
 <style>
-    header {
-        margin: 0;
+    header {       
         padding: 0 1.5rem;
 
         display: flex;
@@ -26,6 +25,46 @@ import Home from '../iconos/Home.astro'
         align-items: center;
         flex-wrap: wrap;
 
-        background-color: rgb(202, 217, 236);
-}
-</style>
+        background-color: rgb(174, 191, 190);
+
+    }
+
+    nav {
+        display: flex;
+        gap: 1rem;
+        flex-wrap: wrap;
+    }
+
+    a {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 0.3rem;
+    }    
+    
+    @media (max-width: 600px) {
+        span {
+            display: none;
+        }
+
+    }
+
+    @media (max-width:403px) {
+        header {
+            padding-bottom: 18px;
+        }
+    }
+    
+    @media (max-width: 300px) {
+        header {
+            padding: 0;
+            padding-bottom: 18px;
+        }
+
+        h1 {
+            font-size: 1.7em;
+        }
+        
+    }
+
+    </style>

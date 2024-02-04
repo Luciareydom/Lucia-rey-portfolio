@@ -33,7 +33,7 @@ input {
     display: flex;
     flex-wrap: wrap;
 
-    background-color: rgb(246, 249, 253);
+    background-color: rgb(242, 239, 223);
 
 }
 
@@ -53,12 +53,7 @@ button {
     width: fit-content;
 }
 
-.home-icon {
-    height: 2rem;
-    width: 2rem;
-}
-
-.envelope-icon {
+.home-icon, .envelope-icon, .academic-icon, .briefcase-icon {
     height: 2rem;
     width: 2rem;
 }
