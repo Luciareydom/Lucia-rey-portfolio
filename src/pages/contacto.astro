@@ -9,12 +9,14 @@ import MainLayout from "../layouts/MainLayout.astro";
 		<h2>Contacta conmigo!</h2>
 		<form class="formulario-contacto">
 			<fieldset class="form">
-		
 				<label>Nombre:<input type="text" class="name" name="name" placeholder="Lucía Rey" required></label>
 				<label>Email:<input type="email" class="email" name="email" placeholder="lreydom.appventures@gmail.com" required></label>
 				<label>Déjame un mensaje:<textarea name="message" id="message" cols="30" rows="10" placeholder="Escribe aquí"></textarea></label>
 			</fieldset>
-			<button type="button">Enviar</button>
+			<div>
+				<button type="reset" name="reset">Reset</button>
+				<button type="button" name="enviar">Enviar</button>
+			</div>
 		</form>
 	</div>
 </MainLayout>
@@ -25,6 +27,7 @@ import MainLayout from "../layouts/MainLayout.astro";
 		flex-direction: column;
 		align-items: center
 	}
+
 	h2 {
 		font-size: 2rem;		
 	}
@@ -42,7 +45,6 @@ import MainLayout from "../layouts/MainLayout.astro";
 		max-width: 100%;
 		display: flex;
 		flex-direction: column;
-
 	}
 
 	input {
@@ -52,13 +54,17 @@ import MainLayout from "../layouts/MainLayout.astro";
 		border: solid 1px;
 		border-radius: 3px;
 		min-height: 1.5rem;
-		max-width: fit-content;
+		max-width: 100%;
 		display: flex;
 		flex-wrap: wrap;
 
 		background-color: rgb(246, 249, 253);
 		color: rgb(89, 85, 76);
 
+	}
+
+	label {
+		
 	}
 
 	::placeholder {
@@ -84,6 +90,13 @@ import MainLayout from "../layouts/MainLayout.astro";
 		width: fit-content;
 	}
 
+	div {
+		min-width: 200px;
+		display: flex;
+		justify-content: space-between;
+		flex-wrap: wrap;
+	}
+
 	@media (max-width: 350px) {
 		h2 {
 		font-size: 1.5rem;
@@ -92,6 +105,5 @@ import MainLayout from "../layouts/MainLayout.astro";
 			margin: 0;
 			padding: 0;
 		}
-
 	}
 </style>
