@@ -5,21 +5,93 @@ import MainLayout from "../layouts/MainLayout.astro";
 
 
 <MainLayout titulo="Contacto" descripcion="Soy Lucía, contacta conmigo: lreydom.appventurers@gmail.com">
-	<h2>Contacta conmigo!</h2>
-
-	<form action="">
-		<fieldset class="form">
-			
-			<label>Nombre:<input type="text" class="name" name="name" required></label>
-			<label>Email:<input type="email" class="email" name="email" placeholder="lreydom.appventures@gmail.com" required></label>
-			<label>Déjame un mensaje:<textarea name="message" id="message" cols="30" rows="10" placeholder="Escribe aquí"></textarea></label>
-		</fieldset>
-		<button type="button">Enviar</button>
-	</form>
+	<div class="container">
+		<h2>Contacta conmigo!</h2>
+		<form class="formulario-contacto">
+			<fieldset class="form">
+		
+				<label>Nombre:<input type="text" class="name" name="name" placeholder="Lucía Rey" required></label>
+				<label>Email:<input type="email" class="email" name="email" placeholder="lreydom.appventures@gmail.com" required></label>
+				<label>Déjame un mensaje:<textarea name="message" id="message" cols="30" rows="10" placeholder="Escribe aquí"></textarea></label>
+			</fieldset>
+			<button type="button">Enviar</button>
+		</form>
+	</div>
 </MainLayout>
 
 <style>
+	.container {
+		display: flex;
+		flex-direction: column;
+		align-items: center
+	}
 	h2 {
-		margin: 3rem;
+		font-size: 2rem;		
+	}
+
+	form {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+	max-width: 300px;
+	}
+
+	fieldset {
+		border-style: none;
+		max-width: 100%;
+		display: flex;
+		flex-direction: column;
+
+	}
+
+	input {
+		margin-top: .2rem;
+		margin-bottom: .5rem;
+		padding: 1px;
+		border: solid 1px;
+		border-radius: 3px;
+		min-height: 1.5rem;
+		max-width: fit-content;
+		display: flex;
+		flex-wrap: wrap;
+
+		background-color: rgb(246, 249, 253);
+		color: rgb(89, 85, 76);
+
+	}
+
+	::placeholder {
+		color: rgb(89, 85, 76);
+		font-family: 'Poppins', system-ui, sans-serif;
+	}
+
+	textarea {
+		margin-top: .2rem;
+		margin-bottom: .5rem;
+		display: block;
+		border: solid 1px;
+		border-radius: 3px;
+		max-width: 500px;
+		resize: vertical;
+
+		font-family: 'Poppins', system-ui, sans-serif;
+		background-color: rgb(246, 249, 253);
+		color: rgb(89, 85, 76);
+	}
+
+	button {
+		width: fit-content;
+	}
+
+	@media (max-width: 350px) {
+		h2 {
+		font-size: 1.5rem;
+		}
+		fieldset {
+			margin: 0;
+			padding: 0;
+		}
+
 	}
 </style>

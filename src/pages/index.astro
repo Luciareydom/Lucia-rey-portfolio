@@ -67,7 +67,7 @@ import MainLayout from "../layouts/MainLayout.astro";
 
 	h2 {
 		margin-left: 1.5rem;
-		/* text-align: center; */
+		text-align: center;
 	}
 
 	h3 {
@@ -75,14 +75,21 @@ import MainLayout from "../layouts/MainLayout.astro";
 		align-items: center;
 		gap: 1rem;
 		flex-wrap: wrap;
+		margin-top: 3rem;
+		margin-bottom: 2rem;
 	}
 
 	h4 {
+		margin-top: 0;
 		margin-bottom: 0;
 		display: flex;
 		align-items: center;
 		gap: 0.5rem;
 		flex-wrap: wrap;
+	}
+
+	li {
+		margin-left: 3rem;
 	}
 
 	p {
@@ -101,7 +108,10 @@ import MainLayout from "../layouts/MainLayout.astro";
 		justify-content: center;
 	}
 
-	div {
+	.container {
+		/* display: grid;
+		grid-template-columns: ; */
+
 		display: flex;
 		justify-content: center;
 		align-items: center;
@@ -110,10 +120,28 @@ import MainLayout from "../layouts/MainLayout.astro";
 		
 	}
 
+	@media (max-width:600px) {
+		h2, h3, h4, li, p, aside {
+			justify-content: center;
+			text-align: center;
+		}
+	}
+
+	@media (max-width:403px) {
+        h2, h3, h4, li, p, aside {
+			margin-left: 0;
+			justify-content: center;
+		}
+    }
+
 	@media (max-width: 300px) {
 		h2 {
-			margin-left: 0;
+			/* margin-left: 0; */
 			font-size: 1.3em;
+		}
+
+		aside {
+			padding: 0;
 		}
 
 		p{

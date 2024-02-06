@@ -10,49 +10,6 @@ a {
     color: inherit;
 }
 
-form {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    align-items: center;
-
-}
-
-fieldset {
-    border-style: none;
-    
-}
-
-input {
-    margin-top: .2rem;
-    margin-bottom: .5rem;
-    padding: 1px;
-    border: solid 1px;
-    border-radius: 3px;
-    min-height: 1.5rem;
-    display: flex;
-    flex-wrap: wrap;
-
-    background-color: rgb(242, 239, 223);
-
-}
-
-textarea {
-    margin-top: .2rem;
-    margin-bottom: .5rem;
-    display: block;
-    border: solid 1px;
-    border-radius: 3px;
-    width:100%;
-    resize: vertical;
-    
-    background-color: rgb(246, 249, 253);
-}
-
-button {
-    width: fit-content;
-}
-
 .home-icon, .envelope-icon, .academic-icon, .briefcase-icon {
     height: 2rem;
     width: 2rem;
@@ -60,4 +17,7 @@ button {
 
 .foto {
     max-width: 100%;
+    margin: 2rem 0;
+    border-style: solid;
+    border-color: rgb(174, 191, 190);
 }
