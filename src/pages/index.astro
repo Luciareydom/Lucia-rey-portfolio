@@ -15,7 +15,7 @@ import MainLayout from "../layouts/MainLayout.astro";
 				<li>
 					<h4>Información personal</h4>
 					<p>Santiago de Compostela</p>
-					<p>lreydom.appventurers@gmail.com</p>
+					<p class="email">lreydom.appventurers@gmail.com</p>
 				</li>
 				<li>
 					<h4>Idiomas</h4>
@@ -43,7 +43,7 @@ import MainLayout from "../layouts/MainLayout.astro";
 	
 			<section class="experience">
 				
-				<h3><Briefcase className="briefcase-icon"/>Experiencia laboral</h3>
+				<h3 class="h3-experience"><Briefcase className="briefcase-icon"/>Experiencia laboral</h3>
 					<ul>
 						<li>
 							<h4><time>2020</time>Facultad de Geología, Universidad de Oviedo</h4>
@@ -63,6 +63,7 @@ import MainLayout from "../layouts/MainLayout.astro";
 <style>
 	img {
 		border-radius: 100%;
+		margin-top: 0;
 	}
 
 	h2 {
@@ -75,17 +76,16 @@ import MainLayout from "../layouts/MainLayout.astro";
 		align-items: center;
 		gap: 1rem;
 		flex-wrap: wrap;
-		margin-top: 3rem;
+		
 		margin-bottom: 2rem;
 	}
 
+	.h3-experience {
+		margin-top: 3rem;
+	}
+
 	h4 {
-		margin-top: 0;
-		margin-bottom: 0;
-		display: flex;
-		align-items: center;
-		gap: 0.5rem;
-		flex-wrap: wrap;
+		margin: 0;
 	}
 
 	li {
@@ -98,8 +98,8 @@ import MainLayout from "../layouts/MainLayout.astro";
 
 	time {
 		font-weight: 400;
+		padding-right: .5rem;
 	}
-
 
 	aside {
 		padding: 1rem;
@@ -109,21 +109,25 @@ import MainLayout from "../layouts/MainLayout.astro";
 	}
 
 	.container {
-		/* display: grid;
-		grid-template-columns: ; */
-
 		display: flex;
 		justify-content: center;
 		align-items: center;
 		gap: 3rem;
 		flex-wrap: wrap;
-		
 	}
 
 	@media (max-width:600px) {
 		h2, h3, h4, li, p, aside {
 			justify-content: center;
 			text-align: center;
+		}
+		
+		li {
+			margin-left: 0;
+		}
+
+		time {
+			display: block;
 		}
 	}
 
@@ -136,7 +140,6 @@ import MainLayout from "../layouts/MainLayout.astro";
 
 	@media (max-width: 300px) {
 		h2 {
-			/* margin-left: 0; */
 			font-size: 1.3em;
 		}
 
@@ -149,8 +152,12 @@ import MainLayout from "../layouts/MainLayout.astro";
 		}
 
 		ul {
-		padding-left: 0;
-	}
+			padding-left: 0;
+		}
+
+		.email {
+			font-size: 0.7em;
+		}
 	}
 
 </style>

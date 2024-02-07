@@ -9,6 +9,7 @@
   html {
     font-family: 'Poppins', system-ui, sans-serif;
     scroll-behavior: smooth;
+    /* min-width: 250px; */
   }
   
   body {
@@ -22,9 +23,7 @@
   
   p {
     text-wrap: pretty;
-  }
-  
-  
+  }  
   
   @media (prefers-reduced-motion: reduce) {
     html {
