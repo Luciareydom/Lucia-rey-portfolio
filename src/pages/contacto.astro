@@ -9,6 +9,7 @@ import MainLayout from "../layouts/MainLayout.astro";
 		<h2>Contacta conmigo!</h2>
 		<form class="formulario-contacto">
 			<fieldset class="form">
+				<legend>Formulario de contacto</legend>
 				<label>Nombre:<input type="text" class="name" name="name" placeholder="Lucía Rey" required></label>
 				<label>Email:<input type="email" class="email" name="email" placeholder="lreydom.appventures@gmail.com" required></label>
 				<label>Déjame un mensaje:<textarea name="message" id="message" cols="30" rows="10" placeholder="Escribe aquí"></textarea></label>
@@ -22,6 +23,10 @@ import MainLayout from "../layouts/MainLayout.astro";
 </MainLayout>
 
 <style>
+	legend {
+		display: none;
+	}
+	
 	.container {
 		display: flex;
 		flex-direction: column;
