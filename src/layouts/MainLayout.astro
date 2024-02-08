@@ -8,6 +8,8 @@ import '@fontsource/poppins/700.css'
 import '../styles/global.css'
 import '../styles/custom.css'
 
+import { ViewTransitions } from 'astro:transitions';
+
 // Determina tipo de datos y ayuda con autocompletado
 interface Props {
 	titulo: string;
@@ -24,6 +26,7 @@ const { titulo = 'Portafolio de Lucía', idioma = 'es', descripcion = 'Portafoli
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<meta name="description" content={descripcion}>
 		<meta name="generator" content={Astro.generator} />
+		<ViewTransitions />
 		<title>{titulo}</title>
 		<link rel="shortcut icon" href="/favicon.svg" type="image/x-icon">
 

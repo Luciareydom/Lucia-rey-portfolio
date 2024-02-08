@@ -9,8 +9,7 @@ import MainLayout from "../layouts/MainLayout.astro";
 	<div class="container">
 	
 		<aside class="general-info">
-			<img src="/foto.png" class="foto" alt="Lucía Rey Domínguez">
-	
+			<img  width="288" src="/foto.webp" class="foto" alt="Lucía Rey Domínguez">
 			<ul>
 				<li>
 					<h4>Información personal</h4>
@@ -80,40 +79,47 @@ import MainLayout from "../layouts/MainLayout.astro";
 		margin-bottom: 2rem;
 	}
 
-	.h3-experience {
-		margin-top: 3rem;
-	}
-
+	
 	h4 {
 		margin: 0;
 	}
-
+	
 	li {
 		margin-left: 3rem;
 	}
-
+	
 	p {
 		margin-left: 1rem;
 	}
-
+	
 	time {
 		font-weight: 400;
 		padding-right: .5rem;
 	}
-
+	
 	aside {
 		padding: 1rem;
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
 	}
-
+	
 	.container {
 		display: flex;
 		justify-content: center;
 		align-items: center;
 		gap: 3rem;
 		flex-wrap: wrap;
+	}
+	
+	.h3-experience {
+		margin-top: 3rem;
+	}
+
+	@media (max-width: 750px) {
+		.main-content {
+			padding-left: 0.7rem;
+		}
 	}
 
 	@media (max-width:600px) {

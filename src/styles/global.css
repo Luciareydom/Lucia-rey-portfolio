@@ -9,7 +9,7 @@
   html {
     font-family: 'Poppins', system-ui, sans-serif;
     scroll-behavior: smooth;
-    /* min-width: 250px; */
+    min-width: 250px;
   }
   
   body {
@@ -21,6 +21,12 @@
     text-wrap: balance;
   }
   
+  img {
+    max-width: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+
   p {
     text-wrap: pretty;
   }  

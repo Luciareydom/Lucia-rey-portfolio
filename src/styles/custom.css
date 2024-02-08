@@ -17,6 +17,8 @@ a {
 
 .foto {
     max-width: 100%;
+    object-fit: cover;
+    object-position: center;
     margin: 2rem 0;
     border-style: solid;
     border-color: rgb(174, 191, 190);
