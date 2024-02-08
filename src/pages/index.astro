@@ -12,12 +12,12 @@ import MainLayout from "../layouts/MainLayout.astro";
 			<img  width="288" src="/foto.webp" class="foto" alt="Lucía Rey Domínguez">
 			<ul>
 				<li>
-					<h4>Información personal</h4>
+					<h2 class="info-general">Información personal</h2>
 					<p>Santiago de Compostela</p>
 					<p class="email"><a href="mailto:lreydom.appventurers@gmail.com">lreydom.appventurers@gmail.com</a></p>
 				</li>
 				<li>
-					<h4>Idiomas</h4>
+					<h2 class="info-general">Idiomas</h2>
 					<p>Castellano, gallego: nativo</p>
 					<p>Inglés: C1 Cambridge</p>
 				</li>
@@ -114,6 +114,12 @@ import MainLayout from "../layouts/MainLayout.astro";
 	
 	.h3-experience {
 		margin-top: 3rem;
+	}
+
+	.info-general {
+		text-align: start;
+		margin: 0;
+		font-size: 1.2rem;
 	}
 
 	@media (max-width: 750px) {
